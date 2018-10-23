@@ -1,7 +1,6 @@
 {
   "name": "airbn_graphql_template",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +14,14 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LigorioSalgado/graphql-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LigorioSalgado/graphql-template/issues"
+  },
+  "homepage": "https://github.com/LigorioSalgado/graphql-template#readme",
+  "description": ""
 }

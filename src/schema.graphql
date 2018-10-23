@@ -1,11 +1,77 @@
 
 type Query {
-    posts:[Post!]!
+    posts: [Post!]!,
+    houses: [House!]!
 
 }
 
-type Post{
+type Mutation {
+    login(email: String!, password: String!): Token
+}
+
+type Post {
     title:String,
     text:String,
     readers:Int
 }
+
+type Token {
+    token: String
+}
+
+type User {
+    name: String,
+    lastname: String,
+    email: String,
+    type: String
+}
+
+
+enum Size {
+    S,
+    M,
+    L,
+    XL
+}
+
+type Facilities {
+    size: Size,
+    num_rooms: Int,
+    num_bathrooms: Int,
+    pet_friendly: Boolean,
+    smoke_friendly: Boolean,
+    tv: Boolean,
+    wifi: Boolean
+}
+
+type Address {
+    address_1: String,
+    address_2: String,
+    zip_code: String,
+    country: String,
+    city: String
+}
+
+
+enum Types {
+    A,
+    R,
+    H
+}
+
+enum Status {
+    B,
+    A
+}
+
+type House {
+    name: String,
+    description: String,
+    price: Float,
+    type: Types,
+    status: Status,
+    user: User,
+    facilities: Facilities,
+    address: Address
+}
+
