@@ -13,9 +13,17 @@ async function login(parent, args, context, info) {
         token: data.token
     }
 
+}
 
+
+async function newHouse(parent, args, context, info){
+    const Authorization = context.request.get('Authorization') //esto configura las cabeceras
+    const {data} = await axios.post(`${API_URL}houses`, args, {headers:{"Authorization": Authorization}})
+
+    return data
 }
 
 module.exports = {
-    login
+    login,
+    newHouse
 }

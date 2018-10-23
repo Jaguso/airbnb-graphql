@@ -11,7 +11,10 @@ const resolvers= {
 
 const server = new GraphQLServer({
     typeDefs:'./src/schema.graphql',
-    resolvers
+    resolvers,
+    context: req => ({
+        ...req
+    })
 })
 
 const options = {
